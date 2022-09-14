@@ -9,6 +9,15 @@ module "s3_bucket" {
   }
 }
 
+terraform {
+  backend "s3" {
+    bucket = "terraform-20220913154813195100000001"
+    key= "terraform.tfstate"
+    region="us-east-1"
+  }
+}
+
+  
 
   
 
